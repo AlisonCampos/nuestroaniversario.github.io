@@ -1,0 +1,214 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header {
+    background: linear-gradient(135deg, #c42f2f, #f1dabf);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    display: none; /* Ocultar el encabezado inicialmente */
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeInDown 2s ease-in-out, bounce 1s infinite;
+}
+header p {
+    margin: 0;
+    font-size: 1.5em;
+    animation: fadeInUp 2s ease-in-out;
+}
+section {
+    display: none; /* Ocultar secciones inicialmente */
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+section.active {
+    display: block; /* Mostrar secciones cuando tengan la clase 'active' */
+}
+section h2 {
+    font-size: 2em;
+    color: #c42f2f;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 2s ease-out, pulse 1s infinite;
+}
+section h2:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #c42f2f;
+    bottom: -10px;
+    left: 0;
+    border-radius: 10px;
+}
+section p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    text-align: justify;
+    animation: fadeIn 2s ease-out;
+    margin: 0 0 20px;
+}
+.gallery {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.gallery h2 {
+    font-size: 2em;
+    color: #c42f2f;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out, pulse 1s infinite;
+}
+.gallery p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    text-align: center;
+    margin: 0 0 20px;
+}
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.calendar-container img {
+    width: 100%;
+    max-width: 335px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.calendar-container img:hover {
+    animation: zoomIn 0.5s forwards, rotate 1s infinite linear;
+}
+.slick-slide img {
+    width: 330px;
+    height: 430px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.slick-slide img.expanded {
+    transform: scale(1.5);
+    z-index: 10;
+    position: relative;
+}
+.slick-slide img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #c42f2f;
+}
+.slick-prev:hover, .slick-next:hover {
+    color: #f1dabf;
+    cursor: pointer;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+footer {
+    background-color: #c42f2f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out;
+}
+#countdown {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

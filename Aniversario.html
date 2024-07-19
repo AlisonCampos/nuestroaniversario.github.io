@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversario de 3 Años con Goku y Milk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales para la cuenta regresiva */
+        
+    </style>
+</head>
+<body>
+    <header id="inicio">
+        <h1 data-aos="fade-down">Feliz Aniversario mi amor!!! <em>&hearts;</em></h1>
+        <p data-aos="fade-up">Eres el amor de mi vida y lo que mas que quiero </p>
+    </header>
+    <section id="contenido" class="active">
+        <h2>Nuestra Historia</h2>
+        <div class="calendar-container">
+            <img src="calendario.png" alt="Nuestra Historia">
+        </div>
+        <p data-aos="fade-left">Nos conocimos cuando yo trabajaba en una tienda y tú ibas a comprar siempre cigarros. Empezamos a platicar y me gustaba escucharte hablar sobre tu trabajo, me gustaba esa emoción con la que contabas cómo era tu trabajo y los lugares que habías conocido por él. Poco a poco me fui enamorando de cómo hablabas y de cómo eras.</p>
+        <p data-aos="fade-right">Me di cuenta de que estaba enamorada de ti un sábado, cuando tenías dos días sin ir a la tienda. Ese día, al verte, me puse muy nerviosa y no podía verte a los ojos porque me ponía roja. Al día siguiente, domingo, no te vi, pero el lunes, al verte, me emocioné mucho y disfruté mucho platicar contigo. Te notaba nervioso y raro, y no sabía por qué hasta que te animaste a robarme un beso.</p>
+        <p data-aos="fade-left">Aún lo recuerdo: te pusiste enfrente de mí y mi corazón iba a mil. Me acomodaste el pelo y me diste un beso. Te lo respondí y me puse muy roja y nerviosa. Me dijiste "te pusiste roja como un tomate" y yo te respondí "el tomate es verde" y te reíste. También te pusiste rojo y nervioso.</p>
+        <p data-aos="fade-right">Al día siguiente, llegaste de nuevo y me diste otro beso. Mirándome a los ojos, me preguntaste si quería ser tu novia. Nerviosa, te pedí que lo repitieras y cuando lo hiciste, te dije que sí.</p>
+    </section>
+    <section id="galeria" class="active">
+        <h2>Nuestras Fotos Especiales</h2>
+        <p>Disfruta de los momentos inolvidables que hemos capturado juntos.</p>
+        <div class="slick-slider">
+            <div><img src="foto1.webp" alt="foto 1"></div>
+            <div><img src="foto2.webp" alt="foto 2"></div>
+            <div><img src="foto3.jpg" alt="foto 3"></div>
+            <div><img src="foto4.webp" alt="foto 4"></div>
+            <div><img src="foto5.jpg" alt="foto 5"></div>
+            <div><img src="foto6.jpg" alt="foto 6"></div>
+            <div><img src="foto7.jpg" alt="foto 7"></div>
+            <div><img src="foto8.jpg" alt="foto 8"></div>
+            <div><img src="foto9.jpg" alt="foto 9"></div>
+            <div><img src="foto10.jpg" alt="foto 10"></div>
+            <div><img src="foto11.jpg" alt="foto 11"></div>
+        </div>
+    </section>
+    <section id="mensaje" class="active">
+        <h2>Mensaje de Amor</h2>
+        <p><i>Querido Paco,</i></p>
+        <p><i>Estos tres años han sido los mejores de mi vida. Cada momento que pasamos juntos es un tesoro y no puedo esperar para ver lo que el futuro nos depara. Te amo con todo mi corazón.</i></p>
+        <p><i>Me siento tan agradecida por tenerte a mi lado. Tu amor me hace ser mejor persona cada día y no puedo esperar para pasar el resto de mi vida.</i></p>
+        <p><i>A través de las alegrías y los desafíos siempre estaré a tu lado. Prometo, apoyarte y protegerte en cada momento de nuestras vidas.</i></p>
+        <p><i>Con amor, Ali</i></p>
+    </section>
+    
+    <section id="cuenta-regresiva" class="active">
+        <h2>Cuenta regresiva para un nuevo año juntos, mi amor hermoso</h2>
+        <p id="countdown"></p>
+        <script>
+            const countDownDate = new Date("Jul 19, 2025 00:00:00").getTime();
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = `<span>${days}d</span> <span>${hours}h</span> <span>${minutes}m</span> <span>${seconds}s</span>`;
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "¡Feliz Aniversario!";
+                }
+            }, 1000);
+        </script>
+    </section>
+    <audio id="background-music" src="Te-Amo-Franco-de-Vita.mp3" preload="auto" loop></audio>
+    <footer>
+        <p>¡Gracias por ser parte de mi vida! <br> Con amor, Ali</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Mostrar el encabezado inicial con animación
+            $('#inicio').fadeIn(1500);
+
+            // Animar el resto de las secciones con AOS al hacer scroll
+            AOS.init({
+                once: true, // Animar solo una vez
+                offset: 100 // Ajustar el offset si es necesario
+            });
+
+            // Mostrar la galería y el contenido después de un tiempo
+            setTimeout(function() {
+                $('#contenido, #galeria, #mensaje, #cuenta-regresiva').addClass('active');
+            }, 2000); // Ajustar el tiempo de espera según sea necesario
+
+            // Inicializar el slider de Slick
+            $('.slick-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                centerMode: true,
+                variableWidth: false,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+
+            // Manejar clic en imágenes del carrusel para expandir
+            $('.slick-slide img').on('click', function() {
+                $(this).toggleClass('expanded');
+            });
+
+            // Reproducción automática de música
+            const audio = document.getElementById('background-music');
+            audio.volume = 0.5; // Ajusta el volumen
+            audio.play().catch(error => {
+                console.log('Error al reproducir el audio:', error);
+            });
+        });
+    </script>
+</body>
+</html>
